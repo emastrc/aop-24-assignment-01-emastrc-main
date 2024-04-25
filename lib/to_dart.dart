@@ -1,44 +1,42 @@
+const String courseName =
+    'Einführung in die Anwendungsorientierte Programmierung';
+const int currentYear = 2024;
 
+List<String> vowels = ['A', 'E', 'I', 'O', 'U'];
 
-    const String courseName = 'Einführung in die Anwendungsorientierte Programmierung';
-    const int currentYear = 2024;
+void main() {
+  print('Herzlich Willkommen zum Kurs "$courseName".');
 
-    List<String> vowels = ['A', 'E', 'I', 'O', 'U'];
+  countToTen();
 
-    void main() {
-        print('Herzlich Willkommen zum Kurs ' + courseName + '.');
+  double numberA = 37.5;
+  double numberB = 4.5;
 
-        countToTen();
+  double result = addTwoNumbers(numberA, numberB);
+  print('The answer is ' + result.toString());
 
-        double numberA = 37.5;
-        double numberB = 4.5;
+  int year = 2023;
+  print(isCurrentYear(year));
 
-        double result = addTwoNumbers(numberA, numberB);
-        print('The answer is ' + result.toString());
+  print(vowels.first);
+  print(vowels.last);
+}
 
-        int year = 2023;
-        print(isCurrentYear(year));
+void countToTen() {
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+}
 
+double addTwoNumbers(double numberA, double numberB) {
+  double result = numberA + numberB;
+  return result;
+}
 
-        print(vowels.first);
-        print(vowels.last);
-    }
-
-    void countToTen() {
-        for (int i = 1; i <=10; i++) {
-            print(i);
-        }
-    }
-
-    double addTwoNumbers(double numberA, double numberB) {
-        double result = numberA + numberB;
-        return result;
-    }
-
-    bool isCurrentYear(int year) {
-        if (year == currentYear) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+bool isCurrentYear(int year) {
+  if (year == currentYear) {
+    return true;
+  } else {
+    return false;
+  }
+}
